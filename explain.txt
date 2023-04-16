@@ -1,0 +1,90 @@
+Server Side Programming
+    Language ===> Javascript
+        variable
+        cond statement
+        loop
+        array
+            methods
+        object
+            methods
+        function
+        async/await
+        destructuring
+        spread operator
+        default params
+        rest parameters
+        setTimeout
+        setInterval
+
+    3.00 pm  4.50 pm
+
+    # Basic Node JS
+    # Express JS (framework)
+    # MongoDB (basic)
+    # Mongoose With MongoDB
+    # Aggregation FM
+    # env 
+    # add debugger
+    # handel logs
+    # Create a JWT
+    # Handel Auth & Authentication
+
+
+What is a node js ? 
+    # Its Not Framework
+    # Its Not Framework
+    # Its Runtime Environment For Javascript
+    # Create Server
+    # Node JS is async in nature
+    # Single | Main Thread
+    # Works Thread
+        Db 
+        File
+        Network
+    # Heap Memory (auto resizable)
+    # Single Core
+    # Static File Sharing (revers proxy) (Nginx)
+    # extension for node js file will be .js
+
+    # entry file index.js / app.js / server.js
+    
+
+# Browser ==> Javascript Engine
+# Node JS ==> Run Javascript JS code without a browser support
+
+# Apache / Nginx / IIS 
+# Java (Java-setup)  
+# C# (C# setup)
+# Python
+# PHP
+
+
+
+******************************* DAY-2 *******************************
+Basic Node 
+    # Module 
+        variable, function , object , array, class
+        # Module code are usable
+Modules Node JS
+    # 3 types
+        Custom Module => developers module
+        Native Modules => Comes With Node JS
+            http , url , path , fs , events 
+        3rd party module
+HTTP Server 
+
+What if i want 
+    file uploading
+    session management
+    multiple request
+    MVC (Model View Controller)
+
+    30% base , 70% application
+    ExpressJS Framework
+
+FS module* => read , write , delete , update
+https://medium.com/analytics-vidhya/intro-to-file-system-in-nodejs-8fc3fe6f0eb1
+
+Path Module*
+https://medium.com/geekculture/nodejs-modules-in-five-minutes-the-path-module-f46445c8621d
+
