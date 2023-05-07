@@ -113,3 +113,12 @@ Work with M_DB
 connect a mongodb ===> nodejs(express)
     # core mongodb diver
     # mongoose library
+        # mongoose is a schema base library
+        # mongoose works promises
+            npm i mongoose (mongodb)
+
+CRUD mongodb mongoose By Using UI 
+    saturday & sunday
+
+CRUD mongodb mongoose By Using API 
+    saturday & sunday

@@ -1,12 +1,16 @@
-const connect = require("./config");
+// Schema of collection
+// structure hoe a document will look line
+const mongoose = require("mongoose");
 
-module.exports.getCustomers = async () => {
-  try {
-    const db = await connect();
-    const result = await db.collection("customers").find().toArray();
-    return result;
-  } catch (error) {
-    console.log(error);
-    return false;
-  }
-};
+const CustomersSchema = new mongoose.Schema({
+  id: { type: Number, require: true },
+  first_name: { type: String, require: true },
+  last_name: { type: String, require: true },
+  email: { type: String, require: true },
+  gender: { type: String, require: true },
+});
+// MOdel
+
+const CustomersModel = mongoose.model("customer", CustomersSchema, "customers");
+// name , schema , collectionName
+module.exports = CustomersModel;

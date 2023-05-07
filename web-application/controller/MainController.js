@@ -1,4 +1,4 @@
-const { getCustomers } = require("../model/CustomersModel");
+const CustomersModel = require("../model/CustomersModel");
 
 let users = [];
 
@@ -32,6 +32,6 @@ module.exports.userList = (request, response) => {
 };
 
 module.exports.getUserList = async (request, response) => {
-  let result = await getCustomers();
+  let result = await CustomersModel.find();
   response.send(result);
 };
