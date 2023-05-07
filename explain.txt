@@ -1,3 +1,5 @@
+DAY_ *********************** Day-1 ******************************
+
 Server Side Programming
     Language ===> Javascript
         variable
@@ -88,3 +90,40 @@ https://medium.com/analytics-vidhya/intro-to-file-system-in-nodejs-8fc3fe6f0eb1
 Path Module*
 https://medium.com/geekculture/nodejs-modules-in-five-minutes-the-path-module-f46445c8621d
 
+Next Session 
+ 3rd party module (NPM)
+   NPM commands
+   create with npm
+   1st express project
+
+DAY_ ******************************** Day-3 **********************************
+
+# node js project
+    # create a configuration ==> package.json    
+    # entry file => app.js ,server.js, index.js
+    
+    # NPM => node package (lib / framework) manager
+
+        *create a configuration ==> npm init
+
+        *add package ==> npm i packageName
+        *add package ==> npm install packageName
+        *add old package ==> npm i packageName@1.2.3
+
+        *remove package ==> npm un packageName
+        *remove package ==> npm uninstall packageName
+
+        *update package ==> npm update package
+
+        *package.json ==> node fileName , nodemon fileName , pm2 fileName
+            custom script
+                start app (production) ==> npm start 
+                start app (dev) ==> npm run dev
+                test app ==> npm test
+
+
+
+    For Next Session ==>
+        Static File Sharing in express
+        What is ejs & pug 
+        Which is better to use

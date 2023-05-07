@@ -1,0 +1,47 @@
+doctype html
+html
+    head
+        title #{title}
+        link(rel="stylesheet", href="/plugins/bootstrap-5.2.3-dist/css/bootstrap.css")
+        link(rel="stylesheet" href="/css/main.css")
+    body
+        main.container
+            section.row
+                section.col-8.mx-auto.card.mt-3
+                    p.h1.text-center.mb-0 User List
+                    hr
+                    table.table.table-bordered
+                        thead.table-primary
+                            tr
+                                th(width="10%") #
+                                th(width="50%") Full Name
+                                th(width="30%") Email ID
+                                th(width="10%") Gender
+                        tbody
+                            each user in users
+                                tr
+                                    th(scope="row") #{user.id}
+                                    td #{user.first_name} #{user.last_name}
+                                    td #{user.email}
+                                    td #{user.gender}
+                    nav.d-flex.justify-content-between
+                        p #{page} of #{totalPage} Page
+                        ul.pagination
+                            if(page !== 1)
+                                li.page-item
+                                    - link = `/user-list/${page-1}`
+                                    a.page-link.bg-danger.text-white(href=link) Previous
+                                li.page-item
+                                    - link = `/user-list/${page-1}`
+                                    a.page-link(href=link) #{page-1}
+                            li.page-item
+                                a.page-link.active(href="#") #{page}
+                            if(page !== totalPage)
+                                li.page-item
+                                    - link = `/user-list/${page+1}`
+                                    a.page-link(href=link) #{page+1}
+                                li.page-item
+                                    - link = `/user-list/${page+1}`
+                                    a.page-link.bg-primary.text-white(href=link) Next
+
+                        

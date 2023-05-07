@@ -1,0 +1,115 @@
+Single Application ==> They don't request for page again and again
+                    ==> React , Angular , Vue
+                    ==> They are not good with SEO
+
+Traditional App ==> They always request for new page to server
+                ==> They are not good with SEO
+
+
+M ==> Model ==> Work With DB
+V ==> View ==> UI user interface
+C ==> Controller ==> Manages the process/program
+
+
+/ ==> request ==> app.js ==> routes ==> controller ==> view / model
+
+
+# user params (getting dynamic values from URL)
+    user-list/1
+    user-list/2
+    user-list/3
+
+
+SQL DB
+    ===> Structure Query Language
+    ===> database ==> tables ==> rows ==> columns
+    ===> Table table will schema
+    ===> store in row 
+    ===> relational data
+    ===> more space to store more data
+    ===> huge query and huge data we more time for execution
+    ===> SQL work on index
+
+No SQL DB
+    ===> Don't any language
+    ===> database ==> collection ==> document ==> fields
+         racks ===>  books ===> pages ===> paragraph
+    ===> Schema less
+    ===> store in a document ==> BSON format (Binary JSON)
+    ===> relational + embedded data
+    ===> don't need more space to store data
+    ===> huge query we don't need more query
+    ===> No SQL works in index
+*************************************************************************************
+
+        Primary ( unique + not null ) = ObjectId("644e3c3e4a75e94f5a86d63b")
+        644e3c3e4a75e94f5a86d63b == primary 
+
+        12 bytes ==> 24 char => hex ( 0 ... f )
+
+            4 (8 char) A 4-byte timestamp, representing the ObjectId's creation, measured in seconds since the Unix epoch.
+            5 (10 char) A 5-byte random value generated once per process.This random value is unique to the machine and process.
+            3 (6 char) A 3-byte incrementing counter, initialized to a random value
+
+
+        01-01-1970 unix time stamp
+
+*************************************************************************************
+
+Work with M_DB
+    #1 Download install m_DB
+    #2 setup shell
+    #3 work with command on command prompt
+        db will be get shown only when it has min 1 collection
+        3ri_batch1 ==> db name
+        # database (db)
+            getList
+                show dbs
+            createDB / Switch
+                use 3ri_batch1 ==> db
+            deleteDB
+                db.dropDatabase()
+
+        # collection
+            getList
+                show collections
+
+            createCollection
+                db.createCollection('customers')
+            
+            deleteCollection
+                db.customers.drop()
+            
+
+        # document  (CRUD)
+            Insert/Create
+                db.customers.insertOne({
+                        "first_name": "Tana",
+                        "last_name": "Ateridge",
+                        "email": "tateridge1@ameblo.jp",
+                        "gender": "Female"
+                    })
+
+                db.customers.insertMany([{...},{...},{...}])
+
+            Read
+                db.customers.find()
+                db.customers.find().count()
+                db.customers.find().limit(2)
+                db.customers.find() filter/search :: projection
+                db.customers.find({ gender:'Female'})
+                db.customers.find({ gender:'Female'},{first_name:1,_id:0})
+                db.customers.find({gender: {$regex :'female', $options: 'i'}})
+                
+            Update
+                db.customers.updateMany({},{$set:{fees:0}})
+                db.customers.updateMany({gender:'Female'},{$set:{fees:1}})
+                db.customers.updateMany({},{$rename:{fees:'amount'}})
+            Delete
+                db.customers.deleteOne({})
+                db.customers.deleteMany({})
+        
+
+connect a mongodb ===> nodejs(express)
+    # core mongodb diver
+    # mongoose library

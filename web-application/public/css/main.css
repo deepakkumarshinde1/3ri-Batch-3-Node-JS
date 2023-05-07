@@ -1,0 +1,5 @@
+.image-size {
+  width: 300px;
+  border: 1px solid black;
+  box-shadow: 10px 10px 2px gray;
+}
