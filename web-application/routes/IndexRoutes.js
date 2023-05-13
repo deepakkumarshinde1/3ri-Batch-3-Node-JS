@@ -1,10 +1,15 @@
 const express = require("express");
-const { home, about, userList, getUserList } = require("../controller/MainController");
+const {
+  home,
+  addUserView,
+  saveNewUser,
+} = require("../controller/MainController");
 const router = express.Router();
 
 router.get("/", home);
-router.get("/about", about);
-router.get("/user-list/:page", userList);
-router.get('/list',getUserList)
+router.get("/registered-user", addUserView);
+
+// post type
+router.post("/save-new-user", saveNewUser);
 
 module.exports = router;

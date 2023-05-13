@@ -3,11 +3,12 @@
 const mongoose = require("mongoose");
 
 const CustomersSchema = new mongoose.Schema({
-  id: { type: Number, require: true },
   first_name: { type: String, require: true },
+  middle_name: { type: String, require: true },
   last_name: { type: String, require: true },
+  mobile: { type: String, require: true },
   email: { type: String, require: true },
-  gender: { type: String, require: true },
+  address: { type: String, require: true },
 });
 // MOdel
 

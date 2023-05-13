@@ -1,0 +1,40 @@
+doctype html
+html
+    head
+        title #{title}
+        link(rel="stylesheet", href="/plugins/bootstrap-5.2.3-dist/css/bootstrap.css")
+        link(rel="stylesheet" href="/css/main.css")
+        script(src="https://unpkg.com/axios/dist/axios.min.js")
+        script(src="/js/user-registration.js")
+    body
+        main.container
+            section.row
+                section.col-lg-6.col-10.mx-auto.card.mt-3
+                    p.h2.text-center.mt-2.text-primary User Registration 
+                    form#userRegistration
+                        div.mb-3.form-floating
+                            input.form-control(name="fName"  type="text" placeholder="Enter First Name" value="deepakkumar")
+                            label Enter First Name
+                        div.mb-3.form-floating
+                            input.form-control(name="MName"  type="text" placeholder="Enter Middle Name" value="Shivaji")
+                            label Enter Middle Name
+                        div.mb-3.form-floating
+                            input.form-control(name="lName" type="text" placeholder="Enter Last Name" value="Shinde")
+                            label Enter Last Name
+                        div.mb-3.form-floating
+                            input.form-control(name="mobile" type="text" placeholder="Mobile Number" value="8007070845")
+                            label Mobile Number
+
+                        div.mb-3.form-floating
+                            input.form-control(name="email" type="text" placeholder="Email" value="deepakkumar.shinde0@gmail.com")
+                            label Email
+                        
+                        div.mb-3.form-floating
+                            textarea.form-control(name="address" type="text" placeholder="Address") At Post Nashik, Maharashtra
+                            label Address
+
+                        div.mb-2.text-center.d-flex.flex-column
+                            button.btn.btn-primary(type="submit") Submit
+                            span 
+                                | Have an account ? 
+                                a(href="/")  Login Now

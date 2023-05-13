@@ -119,6 +119,14 @@ connect a mongodb ===> nodejs(express)
 
 CRUD mongodb mongoose By Using UI 
     saturday & sunday
+        User Form
+        Save Data
+        Print Data 
+        Delete Data
+        Edit Data
+        Login 
+        Logout
 
 CRUD mongodb mongoose By Using API 
     saturday & sunday
+

@@ -4,6 +4,10 @@ const mongoose = require("mongoose");
 const IndexRoutes = require("./routes/IndexRoutes");
 const PORT = 3002;
 
+// enable post/put we nee to methods
+app.use(express.json()); // body-parser
+app.use(express.urlencoded({ extended: false })); // body-parser
+
 // add "use"
 app.set("view engine", "pug");
 app.set("views", "./view");
