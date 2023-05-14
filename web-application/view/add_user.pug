@@ -3,8 +3,12 @@ html
     head
         title #{title}
         link(rel="stylesheet", href="/plugins/bootstrap-5.2.3-dist/css/bootstrap.css")
+        link(href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css", rel="stylesheet")
         link(rel="stylesheet" href="/css/main.css")
+        
         script(src="https://unpkg.com/axios/dist/axios.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js")
+        script(src="/js/common.js")
         script(src="/js/user-registration.js")
     body
         main.container
@@ -28,6 +32,15 @@ html
                         div.mb-3.form-floating
                             input.form-control(name="email" type="text" placeholder="Email" value="deepakkumar.shinde0@gmail.com")
                             label Email
+
+                        div.mb-3.form-floating
+                            input.form-control(name="password" type="password" placeholder="password" value="admin@123")
+                            label Password
+
+                        div.mb-3.form-floating
+                            input.form-control(name="c_password" type="password" placeholder="confirm password" value="admin@123")
+                            label Confirm Password
+                                //- button.btn.btn-success Show
                         
                         div.mb-3.form-floating
                             textarea.form-control(name="address" type="text" placeholder="Address") At Post Nashik, Maharashtra

@@ -1,19 +1,21 @@
 window.addEventListener("load", () => {
-  let form = document.querySelector("#userRegistration");
+  let form = document.querySelector("#userLogin");
+
   form.addEventListener("submit", async (event) => {
     // prevent it from submitting
     event.preventDefault();
     let sendData = getFormData(form);
     console.log(sendData);
-    let { data } = await axios.post("/save-new-user", sendData);
+    let { data } = await axios.post("/make-login", sendData);
     if (data.status === true) {
       // success , warning , error, info
       Swal.fire({
         icon: "success",
-        title: "Success",
-        text: "Your Registration Done Successfully",
+        title: "Login successfully.",
+        showConfirmButton: false,
+        timer: 1500,
       }).then(() => {
-        window.location.assign("/");
+        window.location.assign("/dashboard");
       });
     } else {
       Swal.fire({

@@ -121,10 +121,10 @@ CRUD mongodb mongoose By Using UI
     saturday & sunday
         User Form
         Save Data
+        Login 
         Print Data 
         Delete Data
-        Edit Data
-        Login 
+        Edit Data* Assignment
         Logout
 
 CRUD mongodb mongoose By Using API 

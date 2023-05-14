@@ -3,23 +3,26 @@ html
     head
         title #{title}
         link(rel="stylesheet", href="/plugins/bootstrap-5.2.3-dist/css/bootstrap.css")
+        link(href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css", rel="stylesheet")
         link(rel="stylesheet" href="/css/main.css")
+        
+        script(src="https://unpkg.com/axios/dist/axios.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js")
+        script(src="/js/common.js")
+        script(src="/js/user-login.js")
     body
         main.container
             section.row
-                section.col-6.mx-auto.card.mt-3
+                section.col-8.col-lg-6.mx-auto.card.mt-3
                     p.h2.text-center.mt-2.text-primary User Login
-                    form
-                        div.mb-3
-                            label.form-label(for="exampleInputEmail1") Email address
-                            input.form-control#exampleInputEmail1(type="email", aria-describedby="emailHelp")
-                            #emailHelp.form-text We'll never share your email with anyone else.
-                        div.mb-3
-                            label.form-label(for="exampleInputPassword1") Password
-                            input.form-control#exampleInputPassword1(type="password")
-                        div.mb-3.form-check
-                            input.form-check-input#exampleCheck1(type="checkbox")
-                            label.form-check-label(for="exampleCheck1") Check me out
+                    form#userLogin
+                        div.mb-3.input-group
+                            label.input-group-text(for="exampleInputEmail1") Mobile &nbsp;&nbsp;&nbsp;
+                            input.form-control(name="username" type="text",placeholder="Enter Mobile No" value="8007070846" )
+                        div.mb-3.input-group
+                            label.input-group-text Password
+                            input.form-control(name="password" type="passwrod", placeholder="Enter Password" value="admin@123")
+                            button.input-group-text show
                         div.mb-2.text-center.d-flex.flex-column
                             button.btn.btn-primary(type="submit") Submit
                             span 
