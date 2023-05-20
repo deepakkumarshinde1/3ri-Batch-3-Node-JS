@@ -15,6 +15,7 @@ window.addEventListener("load", () => {
         showConfirmButton: false,
         timer: 1500,
       }).then(() => {
+        localStorage.setItem("fc_token", data.token);
         window.location.assign("/dashboard");
       });
     } else {
@@ -25,6 +26,18 @@ window.addEventListener("load", () => {
       });
     }
   });
+
+  (async function () {
+    let token = localStorage.getItem("fc_token");
+    if (token) {
+      try {
+        await axios.post("/verify-token", { token });
+        window.location.replace("/dashboard");
+      } catch (error) {
+        localStorage.removeItem("fc_token");
+      }
+    }
+  })(); //IIFE
 });
 
 // HTTP ==> cache(limited GET (url)) | body (unlimited , (POST/PUT))

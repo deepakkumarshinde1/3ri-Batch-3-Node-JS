@@ -1,8 +1,8 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const IndexRoutes = require("./routes/IndexRoutes");
-const PORT = 3002;
 
 // enable post/put we nee to methods
 app.use(express.json()); // body-parser
@@ -16,13 +16,13 @@ app.use(express.static("./public"));
 app.use("/", IndexRoutes);
 
 // connection
-const MONGODB_URI = "mongodb://127.0.0.1:27017/3ri_batch1";
+
 // complete connection
 mongoose
-  .connect(MONGODB_URI)
+  .connect(process.env.MONGODB_URI)
   .then(() => {
-    app.listen(PORT, () => {
-      console.log("Server is running on port ", PORT);
+    app.listen(process.env.PORT, () => {
+      console.log("Server is running on port ", process.env.PORT);
     });
   })
   .catch((error) => {

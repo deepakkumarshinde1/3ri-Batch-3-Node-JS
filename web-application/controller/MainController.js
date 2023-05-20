@@ -1,5 +1,6 @@
 const CustomersModel = require("../model/CustomersModel");
 const bcrypt = require("bcrypt");
+const { createToken } = require("../routes/jwt");
 
 // deepak
 // d=eee
@@ -67,10 +68,19 @@ module.exports.makeLogin = async (request, response) => {
     });
     if (result) {
       const match = await bcrypt.compare(data.password, result.password);
+      let jwt_data = {
+        first_name: result.first_name,
+        middle_name: result.middle_name,
+        last_name: result.last_name,
+        mobile: result.mobile,
+        email: result.email,
+        id: result._id,
+      };
+      let token = await createToken(jwt_data);
       if (match) {
         response.send({
           status: true,
-          result: result,
+          token,
         });
       } else {
         response.send({
