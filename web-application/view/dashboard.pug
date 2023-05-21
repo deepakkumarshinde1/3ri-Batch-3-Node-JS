@@ -1,0 +1,43 @@
+doctype html
+html
+    head
+        title #{title}
+        link(rel="stylesheet", href="/plugins/bootstrap-5.2.3-dist/css/bootstrap.css")
+        link(href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css", rel="stylesheet")
+        link(rel="stylesheet" href="/css/main.css")
+        
+        script(src="https://unpkg.com/axios/dist/axios.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js")
+        script(src="/js/common.js")
+        script(src="/js/dashboard.js")
+    body
+        main.container
+            section.row
+                section.col-12.col-lg-12.mx-auto.card.mt-3
+                    nav.navbar.navbar-expand-lg.bg-body-tertiary
+                        .container-fluid
+                            a.navbar-brand(href="#") Profiler
+                            button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
+                                span.navbar-toggler-icon
+                            .collapse.navbar-collapse#navbarSupportedContent
+                                ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                                    li.nav-item
+                                        a.nav-link.active(aria-current="page", href="#") Home
+                                .d-flex(role="search")
+                                    button.btn.btn-outline-danger.mx-2.btn-sm#deactivate(type="submit") Deactivate
+                                    button.btn.btn-outline-primary.mx-2.btn-sm(type="submit") Logout
+                section.col-10.card.mx-auto.rounded-0.mt-3
+                    table.table
+                        tbody
+                            tr
+                                th(width="20%") Full Name
+                                td(width="80%")#userName -
+                            tr
+                                th(width="20%") Mobile
+                                td(width="80%")#userMobile -
+                            tr
+                                th(width="20%") Email
+                                td(width="80%")#userEmail -
+                            tr
+                                th(width="20%") Address
+                                td(width="80%")#userAddress -

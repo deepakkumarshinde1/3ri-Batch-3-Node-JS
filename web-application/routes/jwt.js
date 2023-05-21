@@ -17,3 +17,17 @@ module.exports.verifyToken = async (request, response) => {
     });
   }
 };
+
+module.exports.checkUserToken = async (request, response, next) => {
+  let { token } = request.body;
+  try {
+    let data = jwt.verify(token, process.env.JWT_KEY);
+    response.user = data;
+    next();
+  } catch (err) {
+    response.status(403).send({
+      status: false,
+    });
+    return false;
+  }
+};
