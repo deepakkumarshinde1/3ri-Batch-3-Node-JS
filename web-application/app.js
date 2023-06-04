@@ -2,11 +2,13 @@ require("dotenv").config();
 var createError = require("http-errors");
 const express = require("express");
 const app = express();
+const morgan = require("morgan");
 const mongoose = require("mongoose");
 const IndexRoutes = require("./routes/IndexRoutes");
 const apiRouter = require("./routes/apiRoutes");
 
 // enable post/put we nee to methods
+app.use(morgan("tiny"));
 app.use(express.json()); // body-parser
 app.use(express.urlencoded({ extended: false })); // body-parser
 

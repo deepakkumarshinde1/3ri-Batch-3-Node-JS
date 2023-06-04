@@ -130,3 +130,8 @@ CRUD mongodb mongoose By Using UI
 CRUD mongodb mongoose By Using API 
     saturday & sunday
 
+// api validation
+// logger
+// pm2 
+// deployment
+// mongodb atlas
